@@ -14,9 +14,28 @@
  */
 --%>
 
+<div class="alert alert-default">
+	<strong>Taglibs used: </strong>
+
+	<span class="badge badge-primary">aui:nav-bar</span>
+
+	<span class="badge badge-primary">aui:nav</span>
+
+	<span class="badge badge-primary">aui:nav-item</span>
+</div>
+
 <aui:nav-bar>
-	<aui:nav cssClass="navbar-nav">
-		<aui:nav-item href="menu1" label="Menu Option 1" />
-		<aui:nav-item href="menu2" label="Menu Option 2" />
+	<aui:nav cssClass="navbar-nav" collapsible="true">
+		<aui:nav-item href="#" label="Link" />
+
+		<aui:nav-item href="#" label="Active Link" selected="true" />
+
+		<aui:nav-item label="Dropdown" dropdown="true">
+			<aui:nav-item href="#" label="Dropdown Test" />
+
+			<aui:nav-item href="#" label="Dropdown Item 2" />
+
+			<aui:nav-item href="#" label="Dropdown Item 3" />
+		</aui:nav-item>
 	</aui:nav>
 </aui:nav-bar>
