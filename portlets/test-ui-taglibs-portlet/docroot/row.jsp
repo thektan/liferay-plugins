@@ -14,7 +14,20 @@
  */
 --%>
 
+<div class="alert alert-default">
+	<strong>Taglibs used: </strong>
+
+	<span class="badge badge-primary">aui:row</span>
+
+	<span class="badge badge-primary">aui:col</span>
+</div>
+
 <aui:row>
-	<aui:col width="<%= 15 %>">Here is the column width</aui:col>
-	<aui:col width="<%= 25 %>">This is another column?</aui:col>
+	<aui:col width="<%= 30 %>">
+		Lungo mug, to go qui viennese, mazagran, spoon that affogato espresso robusta at affogato, chicory bar acerbic instant turkish. Instant so frappuccino, extra cafe au lait turkish brewed, mountain a caffeine milk filter turkish so aroma est froth crema americano.
+	</aui:col>
+	
+	<aui:col width="<%= 70 %>">
+		Lungo mug, to go qui viennese, mazagran, spoon that affogato espresso robusta at affogato, chicory bar acerbic instant turkish. Instant so frappuccino, extra cafe au lait turkish brewed, mountain a caffeine milk filter turkish so aroma est froth crema americano. Lungo mug, to go qui viennese, mazagran, spoon that affogato espresso robusta at affogato, chicory bar acerbic instant turkish. Instant so frappuccino, extra cafe au lait turkish brewed, mountain a caffeine milk filter turkish so aroma est froth crema americano.
+	</aui:col>
 </aui:row>

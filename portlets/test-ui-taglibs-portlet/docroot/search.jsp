@@ -17,27 +17,20 @@
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
-	<span class="badge badge-primary">aui:nav-bar</span>
+	<span class="badge badge-primary">liferay-ui:search-container</span>
 
-	<span class="badge badge-primary">aui:nav-bar-search</span>
+	<span class="badge badge-primary">liferay-ui:search-container-results</span>
 
-	<span class="badge badge-primary">liferay-ui:input-search</span>
+	<span class="badge badge-primary">liferay-ui:search-iterator</span>
 </div>
 
-<aui:nav-bar>
-	<aui:nav-bar-search>
-		<div class="form-search">
-			<liferay-ui:input-search />
-		</div>
-	</aui:nav-bar-search>
-</aui:nav-bar>
+<%
+List<String> sampleResults = Arrays.asList("Result1", "Result2", "Result3");
+%>
 
-<br /><br />
-
-<aui:nav-bar>
-	<aui:nav-bar-search>
-		<div class="form-search">
-			<liferay-ui:input-search markupView="lexicon" />
-		</div>
-	</aui:nav-bar-search>
-</aui:nav-bar>
+<liferay-ui:search-container>
+	<liferay-ui:search-container-results
+		results="<%= sampleResults %>"
+	/>
+	<liferay-ui:search-iterator markupView="lexicon"/>
+</liferay-ui:search-container>
