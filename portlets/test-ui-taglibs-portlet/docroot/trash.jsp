@@ -17,27 +17,24 @@
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
-	<span class="badge badge-primary">aui:nav-bar</span>
+	<span class="badge badge-primary">liferay-ui:trash-empty</span>
 
-	<span class="badge badge-primary">aui:nav-bar-search</span>
-
-	<span class="badge badge-primary">liferay-ui:input-search</span>
+	<span class="badge badge-primary">liferay-ui:trash-undo</span>
 </div>
 
-<aui:nav-bar>
-	<aui:nav-bar-search>
-		<div class="form-search">
-			<liferay-ui:input-search />
-		</div>
-	</aui:nav-bar-search>
-</aui:nav-bar>
+<%
+String someString = "testing";
+%>
 
-<br /><br />
+<h3>ui:trash-empty</h3>
 
-<aui:nav-bar>
-	<aui:nav-bar-search>
-		<div class="form-search">
-			<liferay-ui:input-search markupView="lexicon" />
-		</div>
-	</aui:nav-bar-search>
-</aui:nav-bar>
+<liferay-ui:trash-empty
+	portletURL="<%= someString %>"
+	totalEntries="<%= 10 %>"
+/>
+
+<h3>ui:trash-undo</h3>
+
+<liferay-ui:trash-undo
+	portletURL="<%= someString %>"
+/>

@@ -17,27 +17,17 @@
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
-	<span class="badge badge-primary">aui:nav-bar</span>
+	<span class="badge badge-primary">liferay-ui:rss</span>
 
-	<span class="badge badge-primary">aui:nav-bar-search</span>
-
-	<span class="badge badge-primary">liferay-ui:input-search</span>
+	<span class="badge badge-primary">liferay-ui:rss-settings</span>
 </div>
 
-<aui:nav-bar>
-	<aui:nav-bar-search>
-		<div class="form-search">
-			<liferay-ui:input-search />
-		</div>
-	</aui:nav-bar-search>
-</aui:nav-bar>
+<h3>ui:rss</h3>
+
+<liferay-ui:rss />
 
 <br /><br />
 
-<aui:nav-bar>
-	<aui:nav-bar-search>
-		<div class="form-search">
-			<liferay-ui:input-search markupView="lexicon" />
-		</div>
-	</aui:nav-bar-search>
-</aui:nav-bar>
+<h3>ui:rss-settings</h3>
+
+<liferay-ui:rss-settings />

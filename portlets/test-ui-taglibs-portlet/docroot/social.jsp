@@ -17,27 +17,34 @@
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
-	<span class="badge badge-primary">aui:nav-bar</span>
+	<span class="badge badge-primary">liferay-ui:social-activities</span>
 
-	<span class="badge badge-primary">aui:nav-bar-search</span>
+	<span class="badge badge-primary">liferay-ui:social-bookmark</span>
 
-	<span class="badge badge-primary">liferay-ui:input-search</span>
+	<span class="badge badge-primary">liferay-ui:social-bookmarks</span>
+
+	<span class="badge badge-primary">liferay-ui:social-bookmarks-settings</span>
 </div>
 
-<aui:nav-bar>
-	<aui:nav-bar-search>
-		<div class="form-search">
-			<liferay-ui:input-search />
-		</div>
-	</aui:nav-bar-search>
-</aui:nav-bar>
+<h3>ui:social-activities</h3>
 
-<br /><br />
+<liferay-ui:social-activities />
 
-<aui:nav-bar>
-	<aui:nav-bar-search>
-		<div class="form-search">
-			<liferay-ui:input-search markupView="lexicon" />
-		</div>
-	</aui:nav-bar-search>
-</aui:nav-bar>
+<h3>ui:social-bookmark</h3>
+
+<liferay-ui:social-bookmark
+    title=""
+    type=""
+    url=""
+/>
+
+<h3>ui:social-bookmarks</h3>
+
+<liferay-ui:social-bookmarks
+    title=""
+    url=""
+/>
+
+<h3>social-bookmarks-settings</h3>
+
+<liferay-ui:social-bookmarks-settings />

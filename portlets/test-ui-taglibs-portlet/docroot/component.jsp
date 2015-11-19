@@ -17,27 +17,10 @@
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
-	<span class="badge badge-primary">aui:nav-bar</span>
-
-	<span class="badge badge-primary">aui:nav-bar-search</span>
-
-	<span class="badge badge-primary">liferay-ui:input-search</span>
+	<span class="badge badge-primary">aui:component</span>
 </div>
 
-<aui:nav-bar>
-	<aui:nav-bar-search>
-		<div class="form-search">
-			<liferay-ui:input-search />
-		</div>
-	</aui:nav-bar-search>
-</aui:nav-bar>
-
-<br /><br />
-
-<aui:nav-bar>
-	<aui:nav-bar-search>
-		<div class="form-search">
-			<liferay-ui:input-search markupView="lexicon" />
-		</div>
-	</aui:nav-bar-search>
-</aui:nav-bar>
+<%-- 
+<aui:component
+	tagPageContext=""
+/> --%>
