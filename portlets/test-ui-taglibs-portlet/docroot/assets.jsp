@@ -17,6 +17,10 @@
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
+	<span class="badge badge-primary">liferay-ui:asset-categories-error</span>
+
+	<span class="badge badge-primary">liferay-ui:asset-categories-navigation</span>
+
 	<span class="badge badge-primary">liferay-ui:asset-categories-selector</span>
 
 	<span class="badge badge-primary">liferay-ui:asset-categories-summary</span>
@@ -28,13 +32,21 @@
 	<span class="badge badge-primary">liferay-ui:asset-tags-navigation</span>
 
 	<span class="badge badge-primary">liferay-ui:asset-tags-selector</span>
-	
+
 	<span class="badge badge-primary">liferay-ui:asset-tags-summary</span>
 
 	<span class="badge badge-primary">liferay-ui:categorization-filter</span>
 
 	<span class="badge badge-primary">liferay-ui:input-asset-links</span>
 </div>
+
+<h3>ui:asset-categories-error</h3>
+
+<liferay-ui:asset-categories-error />
+
+<h3>ui:asset-categories-navigation</h3>
+
+<liferay-ui:asset-categories-navigation hidePortletWhenEmpty="<%= false %>"/>
 
 <h3>ui:asset-categories-selector</h3>
 
@@ -49,7 +61,7 @@
 
 <h3>ui:asset-links</h3>
 
-<liferay-ui:asset-links />
+<liferay-ui:asset-links assetEntryId="" />
 
 <h3>ui:asset-tags-error</h3>
 
@@ -66,13 +78,16 @@
 <h3>ui:asset-tags-summary</h3>
 
 <liferay-ui:asset-tags-summary
-    className=""
-    classPK=""
+	className=""
+	classPK=""
 />
 
 <h3>ui:categorization-filter</h3>
 
-<liferay-ui:categorization-filter />
+<liferay-ui:categorization-filter
+	assetType="content"
+	portletURL="<%= portletURL %>"
+/>
 
 <h3>ui:input-asset-links</h3>
 

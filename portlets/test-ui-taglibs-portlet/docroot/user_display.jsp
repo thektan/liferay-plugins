@@ -17,10 +17,9 @@
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
-	<span class="badge badge-primary">aui:component</span>
+	<span class="badge badge-primary">liferay-ui:user-display</span>
 </div>
 
-<%-- 
-<aui:component
-	tagPageContext=""
-/> --%>
+<liferay-ui:user-display
+	userId="<%= user.getUserId() %>"
+/>

@@ -17,15 +17,28 @@
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
-	<span class="badge badge-primary">liferay-ui:discussion</span>
+	<span class="badge badge-primary">liferay-ui:search-container</span>
+
+	<span class="badge badge-primary">liferay-ui:search-container-results</span>
+
+	<span class="badge badge-primary">liferay-ui:search-iterator</span>
 </div>
 
+
 <c:catch var="catchException">
-	<liferay-ui:discussion
-		className="discussionClassName"
-		classPK="1"
-		userId="<%= user.getUserId() %>"
-	/>
+
+	<liferay-ui:search-toggle
+		buttonLabel="search"
+		displayTerms=""
+		id="toggle_id_users_admin_group_search"
+	>
+		<aui:fieldset>
+			<aui:input inlineField="<%= true %>" name="Name" size="30" value="Value" />
+
+			<aui:input inlineField="<%= true %>" name="Name" size="30" value="Value" />
+		</aui:fieldset>
+	</liferay-ui:search-toggle>
+
 </c:catch>
 
 <c:if test = "${catchException != null}">

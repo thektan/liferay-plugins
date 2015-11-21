@@ -17,49 +17,41 @@
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
-	<span class="badge badge-primary">aui:icon</span>
+	<span class="badge badge-primary">staging:menu</span>
 
-	<span class="badge badge-primary">liferay-ui:icon</span>
+	<span class="badge badge-primary">staging:configuration-header</span>
+
+	<span class="badge badge-primary">staging:content</span>
+
+	<span class="badge badge-primary">staging:deletions</span>
+
+	<span class="badge badge-primary">staging:portlet-list</span>
 </div>
 
-<h3>aui:icon</h3>
+<h3>liferay-staging:menu</h3>
 
-<aui:icon
-	image="edit"
-/>
+<liferay-staging:menu cssClass="publish-link" extended="<%= false %>" onlyActions="<%= true %>" />
 
 <br />
 
-<h3>aui:icon with label</h3>
+<h3>liferay-staging:menu</h3>
 
-<aui:icon
-	image="heart"
-	label="Heart Icon"
-/>
+<liferay-staging:configuration-header />
 
 <br />
 
-<h3>liferay-ui:icon</h3>
+<h3>liferay-staging:menu</h3>
 
-<liferay-ui:icon
-	iconCssClass="icon-refresh"
-/>
+<liferay-staging:content />
 
 <br />
 
-<h3>liferay-ui:icon with tooltip</h3>
+<h3>liferay-staging:menu</h3>
 
-<liferay-ui:icon
-	iconCssClass="icon-circle-arrow-left"
-	message="Search Icon"
-/>
+<liferay-staging:deletions />
 
 <br />
 
-<h3>liferay-ui:icon with label</h3>
+<h3>liferay-staging:menu</h3>
 
-<liferay-ui:icon
-	iconCssClass="icon-search"
-	message="Search Icon"
-	label="true"
-/>
+<liferay-staging:portlet-list />

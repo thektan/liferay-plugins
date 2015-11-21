@@ -17,19 +17,7 @@
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
-	<span class="badge badge-primary">liferay-ui:discussion</span>
+	<span class="badge badge-primary">theme:meta-tags</span>
 </div>
 
-<c:catch var="catchException">
-	<liferay-ui:discussion
-		className="discussionClassName"
-		classPK="1"
-		userId="<%= user.getUserId() %>"
-	/>
-</c:catch>
-
-<c:if test = "${catchException != null}">
-	<div class="alert alert-danger">
-		${catchException}
-	</div>
-</c:if>
+<liferay-theme:meta-tags />

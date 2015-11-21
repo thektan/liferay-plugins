@@ -19,5 +19,9 @@
 
 	<span class="badge badge-primary">liferay-ui:success</span>
 
-    <span class="badge badge-primary">liferay-ui:error</span>
+	<span class="badge badge-primary">liferay-ui:error</span>
 </div>
+
+<liferay-ui:success key="success" message="Success Message" />
+
+<liferay-ui:error key="error" message="Error Message" />
