@@ -33,16 +33,16 @@
 <h3>ui:social-bookmark</h3>
 
 <liferay-ui:social-bookmark
-    title=""
-    type=""
-    url=""
+	title="Test Title"
+	type="Twitter"
+	url="liferay"
 />
 
 <h3>ui:social-bookmarks</h3>
 
 <liferay-ui:social-bookmarks
-    title=""
-    url=""
+	title=""
+	url="liferay"
 />
 
 <h3>social-bookmarks-settings</h3>

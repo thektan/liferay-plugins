@@ -13,6 +13,12 @@
  * details.
  */
 --%>
+<%@ page import="com.liferay.portal.kernel.util.WebKeys" %>
+<%@ page import="com.liferay.portlet.blogs.model.BlogsEntry" %>
+
+<%
+BlogsEntry entry = (BlogsEntry)request.getAttribute(WebKeys.BLOGS_ENTRY);
+%>
 
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
@@ -20,7 +26,11 @@
 	<span class="badge badge-primary">liferay-ui:custom-attribute-list</span>
 </div>
 
+<h3>Custom Attributes for BlogsEntry</h3>
+
 <liferay-ui:custom-attribute-list
-	className="customAttributeListClass"
-	classPK="1"
+	className="<%= BlogsEntry.class.getName() %>"
+	classPK="<%= (entry != null) ? entry.getEntryId() : 0 %>"
+	editable="<%= true %>"
+	label="<%= true %>"
 />

@@ -20,4 +20,30 @@
 	<span class="badge badge-primary">aui:workflow-status</span>
 </div>
 
-<%-- <aui:workflow-status markupView="lexicon" /> --%>
+<h3>Default Status with Help Message</h3>
+
+<aui:workflow-status
+	helpMessage="Help Message"
+	status="<%= 0 %>"
+/>
+
+<br />
+
+<h3>Version and Custom Status Message</h3>
+
+<aui:workflow-status
+	status="<%= 7 %>"
+	statusMessage="Testing Status Message"
+	version="2"
+/>
+
+<br />
+
+<h3>Lexicon Markup View</h3>
+
+<aui:workflow-status
+	helpMessage="Help Message"
+	markupView="lexicon"
+	status="<%= 0 %>"
+	version="5"
+/>

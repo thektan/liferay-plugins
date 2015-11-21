@@ -14,22 +14,20 @@
  */
 --%>
 
+<%@ page import="com.liferay.portal.kernel.dao.search.SearchContainer" %>
+
+<%
+SearchContainer searchContainer = new SearchContainer(renderRequest, null, null, SearchContainer.DEFAULT_CUR_PARAM, 5, portletURL, null, null);
+%>
+
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
-	<span class="badge badge-primary">liferay-ui:discussion</span>
+	<span class="badge badge-primary">liferay-ui:search-container</span>
+
+	<span class="badge badge-primary">liferay-ui:search-container-results</span>
+
+	<span class="badge badge-primary">liferay-ui:search-iterator</span>
 </div>
 
-<c:catch var="catchException">
-	<liferay-ui:discussion
-		className="discussionClassName"
-		classPK="1"
-		userId="<%= user.getUserId() %>"
-	/>
-</c:catch>
-
-<c:if test = "${catchException != null}">
-	<div class="alert alert-danger">
-		${catchException}
-	</div>
-</c:if>
+<liferay-ui:search-paginator searchContainer="<%= searchContainer %>"/>

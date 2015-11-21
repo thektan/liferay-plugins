@@ -20,21 +20,31 @@
 	<span class="badge badge-primary">liferay-ui:trash-empty</span>
 
 	<span class="badge badge-primary">liferay-ui:trash-undo</span>
+
+	<span class="badge badge-primary">liferay-ui:restore-entry</span>
 </div>
 
 <%
 String someString = "testing";
 %>
 
-<h3>ui:trash-empty</h3>
+<h3>liferay-ui:trash-empty</h3>
 
 <liferay-ui:trash-empty
 	portletURL="<%= someString %>"
 	totalEntries="<%= 10 %>"
 />
 
-<h3>ui:trash-undo</h3>
+<h3>liferay-ui:trash-undo</h3>
 
 <liferay-ui:trash-undo
 	portletURL="<%= someString %>"
+/>
+
+<h3>liferay-ui:restore-entry</h3>
+
+<liferay-portlet:actionURL name="restoreEntry" varImpl="restoreURL" />
+
+<liferay-ui:restore-entry
+	restoreURL="<%= restoreURL %>"
 />

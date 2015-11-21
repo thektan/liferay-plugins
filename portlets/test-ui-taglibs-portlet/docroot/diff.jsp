@@ -13,17 +13,24 @@
  * details.
  */
 --%>
-<%
+
+<div class="alert alert-default">
+	<strong>Taglibs used: </strong>
+
+	<span class="badge badge-primary">liferay-ui:diff</span>
+
+	<span class="badge badge-primary">liferay-ui:diff-html</span>
+
+	<span class="badge badge-primary">liferay-ui:diff-version-comparator</span>
+</div>
+
+<h3>ui:diff</h3>
+
+<%-- <%
 String sourceName = (String)renderRequest.getAttribute("SOURCE_NAME");
 String targetName = (String)renderRequest.getAttribute("TARGET_NAME");
 List[] diffResults = (List[])renderRequest.getAttribute("DIFF_RESULTS");
-
-out.println(diffResults);
-out.println(sourceName);
-out.println(targetName);
 %>
-
-<%-- <liferay-ui:header title="liferay-ui:diff" />
 
 <c:catch var="catchException">
 	<liferay-ui:diff
@@ -38,3 +45,54 @@ out.println(targetName);
 		${catchException}
 	</div>
 </c:if> --%>
+
+<br />
+
+<h3>ui:diff-html</h3>
+
+<%
+String diffHtmlResults = (String)request.getAttribute(WebKeys.DIFF_HTML_RESULTS);
+double diffVersion = GetterUtil.getDouble(request.getAttribute(WebKeys.DIFF_VERSION));
+
+String infoMessage = StringPool.BLANK;
+
+if (diffVersion > 0) {
+	infoMessage = LanguageUtil.format(request, "unable-to-render-version-x", diffVersion);
+}
+%>
+
+<liferay-ui:diff-html
+	diffHtmlResults="<%= diffHtmlResults %>"
+	infoMessage="<%= infoMessage %>"
+/>
+
+<br />
+
+<h3>ui:diff-version-comparator</h3>
+
+<%-- <%
+String redirect = ParamUtil.getString(request, "redirect");
+long groupId = ParamUtil.getLong(request, "groupId");
+String articleId = ParamUtil.getString(request, "articleId");
+
+Set<Locale> availableLocales = (Set<Locale>)request.getAttribute(WebKeys.AVAILABLE_LOCALES);
+String languageId = (String)request.getAttribute(WebKeys.LANGUAGE_ID);
+double sourceVersion = (Double)request.getAttribute(WebKeys.SOURCE_VERSION);
+double targetVersion = (Double)request.getAttribute(WebKeys.TARGET_VERSION);
+%> --%>
+
+<%-- <liferay-portlet:resourceURL id="compareVersions" varImpl="resourceURL">
+	<portlet:param name="redirect" value="<%= redirect %>" />
+	<portlet:param name="groupId" value="<%= String.valueOf(groupId) %>" />
+	<portlet:param name="articleId" value="<%= articleId %>" />
+</liferay-portlet:resourceURL>
+
+<liferay-ui:diff-version-comparator
+	availableLocales="<%= availableLocales %>"
+	diffHtmlResults="<%= diffHtmlResults %>"
+	languageId="<%= languageId %>"
+	portletURL="<%= portletURL %>"
+	resourceURL="<%= resourceURL %>"
+	sourceVersion="<%= sourceVersion %>"
+	targetVersion="<%= targetVersion %>"
+/> --%>

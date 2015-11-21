@@ -14,6 +14,16 @@
  */
 --%>
 
+<div class="alert alert-default">
+	<strong>Taglibs used: </strong>
+
+	<span class="badge badge-primary">aui:nav-bar</span>
+
+	<span class="badge badge-primary">aui:nav</span>
+
+	<span class="badge badge-primary">liferay-ui:app-view-display-style</span>
+</div>
+
 <aui:nav-bar>
 	<aui:nav collapsible="<%= true %>" cssClass="nav-display-style-buttons navbar-nav" icon="th-list" id="displayStyleButtons">
 		<liferay-ui:app-view-display-style
