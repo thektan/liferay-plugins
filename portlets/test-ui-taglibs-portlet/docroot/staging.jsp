@@ -14,6 +14,16 @@
  */
 --%>
 
+<%
+String cmd = Constants.EXPORT;
+
+Map<String, String[]> parameterMap = (Map<String, String[]>)GetterUtil.getObject(request.getAttribute("liferay-staging:content:parameterMap"), Collections.emptyMap());
+
+String type = GetterUtil.getString(request.getAttribute("liferay-staging:content:type"));
+
+List<Portlet> dataSiteLevelPortlets = ExportImportHelperUtil.getDataSiteLevelPortlets(company.getCompanyId(), false);
+%>
+
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
@@ -34,24 +44,28 @@
 
 <br />
 
-<h3>liferay-staging:menu</h3>
+<h3>liferay-staging:configuration-header</h3>
 
 <liferay-staging:configuration-header />
 
 <br />
 
-<h3>liferay-staging:menu</h3>
+<h3>liferay-staging:content</h3>
 
-<liferay-staging:content />
+<%-- <liferay-staging:content /> --%>
+
+<liferay-staging:content disableInputs="<%= true %>" parameterMap="<%= parameterMap %>" type="<%= cmd %>" />
 
 <br />
 
-<h3>liferay-staging:menu</h3>
+<h3>liferay-staging:deletions</h3>
 
 <liferay-staging:deletions />
 
 <br />
 
-<h3>liferay-staging:menu</h3>
+<h3>liferay-staging:portlet-list</h3>
 
-<liferay-staging:portlet-list />
+<%-- <liferay-staging:portlet-list /> --%>
+
+<liferay-staging:portlet-list dateRange="" disableInputs="" parameterMap="<%= parameterMap %>" portlets="<%= dataSiteLevelPortlets %>" type="<%= type %>" />

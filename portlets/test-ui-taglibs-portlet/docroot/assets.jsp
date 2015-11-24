@@ -69,13 +69,36 @@
 
 <h3>ui:asset-tags-navigation</h3>
 
-<liferay-ui:asset-tags-navigation />
+<%
+long classNameId = PrefsParamUtil.getLong(portletPreferences, request, "classNameId");
+String displayStyle = PrefsParamUtil.getString(portletPreferences, request, "displayStyle", "cloud");
+long displayStyleGroupId = PrefsParamUtil.getLong(portletPreferences, request, "displayStyleGroupId", themeDisplay.getScopeGroupId());
+int maxAssetTags = PrefsParamUtil.getInteger(portletPreferences, request, "maxAssetTags", 10);
+boolean showAssetCount = PrefsParamUtil.getBoolean(portletPreferences, request, "showAssetCount");
+boolean showZeroAssetCount = PrefsParamUtil.getBoolean(portletPreferences, request, "showZeroAssetCount");
+%>
+
+<liferay-ui:asset-tags-navigation
+	classNameId="<%= classNameId %>"
+	displayStyle="<%= displayStyle %>"
+	hidePortletWhenEmpty="<%= false %>"
+	maxAssetTags="<%= maxAssetTags %>"
+	showAssetCount="<%= showAssetCount %>"
+	showZeroAssetCount="<%= showZeroAssetCount %>"
+/>
 
 <h3>ui:asset-tags-selector</h3>
 
 <liferay-ui:asset-tags-selector />
 
 <h3>ui:asset-tags-summary</h3>
+
+<%
+// long assetEntryId = ParamUtil.getLong(request, "assetEntryId");
+// AssetRendererFactory<?> assetRendererFactory = AssetRendererFactoryRegistryUtil.getAssetRendererFactoryByType(type);
+//
+// AssetEntry assetEntry = assetRendererFactory.getAssetEntry(assetEntryId);
+%>
 
 <liferay-ui:asset-tags-summary
 	className=""

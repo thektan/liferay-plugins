@@ -14,6 +14,12 @@
  */
 --%>
 
+<%
+	PortletRequest portletRequest = (PortletRequest)request.getAttribute("javax.portlet.request");
+
+	SessionMessages.add(portletRequest, portletDisplay.getId());
+%>
+
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 

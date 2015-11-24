@@ -14,10 +14,6 @@
  */
 --%>
 
-<%
-// List<String> sampleResults = Arrays.asList("Result1", "Result2", "Result3");
-%>
-
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
@@ -25,43 +21,43 @@
 
 	<span class="badge badge-primary">liferay-ui:search-container-results</span>
 
+	<span class="badge badge-primary">liferay-ui:search-container-row</span>
+
+	<span class="badge badge-primary">liferay-ui:search-container-column-text</span>
+
 	<span class="badge badge-primary">liferay-ui:search-iterator</span>
 </div>
 
-<%-- <liferay-ui:search-container>
-	<liferay-ui:search-container-results
-		results="<%= sampleResults %>"
-	/>
-	<liferay-ui:search-iterator markupView="lexicon"/>
-</liferay-ui:search-container> --%>
+<%
+// portletURL.setParameter("mvcPath", "/search.jsp");
+%>
 
-<liferay-ui:search-container delta="10" emptyResultsMessage="no-users-were-found">
-	<%-- <liferay-ui:search-container-results
-		results="<%= UserLocalServiceUtil.search(
-			company.getCompanyId(), searchTerms.getKeywords(), searchTerms.getActiveObj(),
-			userParams, searchContainer.getStart(), searchContainer.getEnd(),
- 			searchContainer.getOrderByComparator()); %>"
-		total="<%= UserLocalServiceUtil.searchCount(
-			company.getCompanyId(), searchTerms.getKeywords(), searchTerms.getActiveObj(),
-			userParams); %>"
-	/> --%>
+<liferay-ui:search-container
+	delta="1"
+	headerNames="email-address,screen-name"
+	iteratorURL="<%= portletURL %>"
+	total="<%= UserLocalServiceUtil.getUsersCount() %>"
+>
+	<liferay-ui:search-container-results
+		results="<%= UserLocalServiceUtil.getUsers(searchContainer.getStart(), searchContainer.getEnd()) %>"
+	/>
 
 	<liferay-ui:search-container-row
 		className="com.liferay.portal.model.User"
+		escapedModel="<%= true %>"
 		keyProperty="userId"
-		modelVar="user"
+		modelVar="curUser"
 	>
 		<liferay-ui:search-container-column-text
-			name="name"
-			value="<%= user.getFullName() %>"
+			name="email-address"
+			property="emailAddress"
 		/>
 
 		<liferay-ui:search-container-column-text
-			name="first-name"
-			property="firstName"
+			name="screen-name"
+			property="screenName"
 		/>
 	</liferay-ui:search-container-row>
 
 	<liferay-ui:search-iterator />
-
 </liferay-ui:search-container>

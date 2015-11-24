@@ -81,9 +81,15 @@
 
 	<liferay-ui:input-date />
 
-	<h4>ui:input-field</h4>
+	<br />
 
-	<liferay-ui:input-field field="active" model="<%= KeyValuePair.class %>" />
+	<h4>ui:input-field (model = SCLicense)</h4>
+
+	<liferay-ui:input-field field="active" defaultValue="<%= Boolean.TRUE %>" model="<%= SCLicense.class %>" />
+
+	<h4>ui:input-field (model = SCProductEntry)</h4>
+
+	<liferay-ui:input-field field="pageURL" model="<%= SCProductEntry.class %>" />
 
 	<br />
 
