@@ -13,14 +13,14 @@
  * details.
  */
 --%>
+
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
 	<span class="badge badge-primary">liferay-ui:icon-menu</span>
-	
+
 	<span class="badge badge-primary">liferay-ui:icon</span>
 </div>
-
 
 <liferay-ui:icon-menu icon="<%= StringPool.BLANK %>" message="Button">
 	<liferay-ui:icon

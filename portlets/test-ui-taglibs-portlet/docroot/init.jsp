@@ -21,6 +21,8 @@
 <%@ taglib uri="http://liferay.com/tld/util" prefix="liferay-util" %>
 <%@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
 <%@ taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %>
+<%-- <%@ taglib uri="http://liferay.com/tld/frontend" prefix="liferay-frontend" %> --%>
+<%-- <%@ taglib uri="/Users/liferay/Liferay/master/portal/modules/frontend/frontend-taglib/src/main/resources/META-INF/resources/liferay-frontend.tld" prefix="liferay-frontend" %> --%>
 <%-- <%@ taglib uri="http://liferay.com/tld/staging" prefix="liferay-staging" %> --%>
 <%-- <%@ taglib uri="http://liferay.com/tld/ddm" prefix="liferay-ddm" %> --%>
 
@@ -78,5 +80,7 @@
 
 <portlet:defineObjects />
 <liferay-theme:defineObjects />
+
+<link rel="stylesheet" href="<%=request.getContextPath()%>/css/main.css">
 
 <%-- <script type="text/javascript" src="<%=request.getContextPath()%>/js/mass_create_6.2.x.js"></script> --%>

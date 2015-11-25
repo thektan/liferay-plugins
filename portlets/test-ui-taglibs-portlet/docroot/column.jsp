@@ -22,32 +22,52 @@
 	<span class="badge badge-primary">aui:column</span>
 </div>
 
-<aui:layout>
+
 	<aui:column columnWidth="<%= 25 %>" first="<%= true %>">
-		Column width set at 25 with "first" attribute set to true. This library is free software; you can redistribute it and/or modify it under
-		the terms of the GNU Lesser General Public License as published by the Free
-		Software Foundation; either version 2.1 of the License, or (at your option)
-		any later version.
+		Column width set at 25 with "first" attribute set to true.
+		Column width set at 25 with "first" attribute set to true.
+		Column width set at 25 with "first" attribute set to true.
+		Column width set at 25 with "first" attribute set to true.
+		Column width set at 25 with "first" attribute set to true.
 	</aui:column>
 
 	<aui:column columnWidth="<%= 25 %>">
-		Column width set at 25. This library is free software; you can redistribute it and/or modify it under
-		the terms of the GNU Lesser General Public License as published by the Free
-		Software Foundation; either version 2.1 of the License, or (at your option)
-		any later version.
+		Column width set at 25.
+		Column width set at 25.
+		Column width set at 25.
+		Column width set at 25.
+		Column width set at 25.
 	</aui:column>
 
 	<aui:column columnWidth="<%= 25 %>">
-		Column width set at 25. This library is free software; you can redistribute it and/or modify it under
-		the terms of the GNU Lesser General Public License as published by the Free
-		Software Foundation; either version 2.1 of the License, or (at your option)
-		any later version.
+		Column width set at 25.
+		Column width set at 25.
+		Column width set at 25.
+		Column width set at 25.
+		Column width set at 25.
 	</aui:column>
 
 	<aui:column columnWidth="<%= 25 %>" last="<%= true %>">
-		Column width set at 25 with "last" attribute set to true.This library is free software; you can redistribute it and/or modify it under
-		the terms of the GNU Lesser General Public License as published by the Free
-		Software Foundation; either version 2.1 of the License, or (at your option)
-		any later version.
+		Column width set at 25 with "last" attribute set to true.
+		Column width set at 25 with "last" attribute set to true.
+		Column width set at 25 with "last" attribute set to true.
+		Column width set at 25 with "last" attribute set to true.
+		Column width set at 25 with "last" attribute set to true.
 	</aui:column>
-</aui:layout>
+
+
+<aui:column columnWidth="<%= 30 %>" first="<%= true %>">
+	Column width set at 30 with "first" attribute set to true.
+	Column width set at 30 with "first" attribute set to true.
+	Column width set at 30 with "first" attribute set to true.
+	Column width set at 30 with "first" attribute set to true.
+	Column width set at 30 with "first" attribute set to true.
+</aui:column>
+
+<aui:column columnWidth="<%= 70 %>" last="<%= true %>">
+	Column width set at 70 with "last" attribute set to true.
+	Column width set at 70 with "last" attribute set to true.
+	Column width set at 70 with "last" attribute set to true.
+	Column width set at 70 with "last" attribute set to true.
+	Column width set at 70 with "last" attribute set to true.
+</aui:column>

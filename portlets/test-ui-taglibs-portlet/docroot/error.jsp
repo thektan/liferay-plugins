@@ -14,10 +14,16 @@
  */
 --%>
 
+<%
+	PortletRequest portletRequest = (PortletRequest)request.getAttribute("javax.portlet.request");
+
+	SessionErrors.add(portletRequest, "error-test");
+%>
+
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
-	<span class="badge badge-primary">liferay-ui:email-notification-settings</span>
+	<span class="badge badge-primary">liferay-ui:error</span>
 </div>
 
-<liferay-ui:email-notification-settings />
+<liferay-ui:error key="error-test" message="Error Message" />

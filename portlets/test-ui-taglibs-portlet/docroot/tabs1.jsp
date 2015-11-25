@@ -14,7 +14,7 @@
  */
 --%>
 
-<%@ include file="/init.jsp" %>
+<%-- <%@ include file="/init.jsp" %>
 
 <%
 String tabs1 = ParamUtil.getString(request, "tabs1", "button");
@@ -30,4 +30,4 @@ tabs1URL.setParameter("tabs1", tabs1);
 <liferay-ui:tabs
 	names="<%= tabs1Names %>"
 	url="<%= tabs1URL.toString() %>"
-/>
+/> --%>

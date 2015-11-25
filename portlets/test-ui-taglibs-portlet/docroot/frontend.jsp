@@ -17,7 +17,11 @@
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
-	<span class="badge badge-primary">liferay-ui:email-notification-settings</span>
+	<span class="badge badge-primary">liferay-ui:success</span>
+
+	<span class="badge badge-primary">liferay-ui:error</span>
 </div>
 
-<liferay-ui:email-notification-settings />
+<liferay-frontend:add-menu>
+	<liferay-frontend:add-menu-item title='<%= LanguageUtil.get(request, "add-tag") %>' url="#" />
+</liferay-frontend:add-menu>
