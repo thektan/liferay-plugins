@@ -6,14 +6,10 @@
 			<taglib-uri>http://java.sun.com/jsp/jstl/core</taglib-uri>
 			<taglib-location>/WEB-INF/tld/c.tld</taglib-location>
 		</taglib>
-		<taglib>
-			<taglib-uri>http://liferay.com/tld/ddm</taglib-uri>
-			<taglib-location>/WEB-INF/tld/ddm.tld</taglib-location>
-		</taglib>
-		<taglib>
+		<!-- <taglib>
 			<taglib-uri>http://liferay.com/tld/frontend</taglib-uri>
 			<taglib-location>/Users/liferay/Liferay/master/portal/modules/frontend/frontend-taglib/src/main/resources/META-INF/resources/liferay-frontend.tld</taglib-location>
-		</taglib>
+		</taglib> -->
 	</jsp-config>
 	<filter>
 		<filter-name>Secure JSON Web Service Servlet Filter</filter-name>
