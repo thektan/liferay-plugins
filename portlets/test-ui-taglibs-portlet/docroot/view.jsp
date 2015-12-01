@@ -17,7 +17,7 @@
 <%@ include file="/init.jsp" %>
 
 <%
-String tabs1 = ParamUtil.getString(request, "tabs1", "Taglib");
+String tabs1 = ParamUtil.getString(request, "tabs1", "Assets");
 
 PortletURL portletURL = renderResponse.createRenderURL();
 
@@ -26,7 +26,7 @@ portletURL.setWindowState(WindowState.NORMAL);
 portletURL.setParameter("struts_action", "/test-mobile-responsive/view");
 portletURL.setParameter("tabs1", tabs1);
 
-String tabNames = "Assets,Breadcrumb,Button,Captcha,Column,Container,Custom Attribute,Diff,Discussion,Display Style,Email Notification Settings,Error,Error Header,Flags,Form Navigator,Frontend,Header,HTML,Icon Menu,Icons,Input,Language,Logo Selector,Membership Policy Error,Meta Tags,Navbar,Navbar Search,Navigation,Page Iterator,Panel,Preview,Quick Access,Ratings,Row,RSS,Search,Search Paginator,Search Toggle,Section,Sites Directory,Social,Staging,Success,Toggle,Template Selector,Translation Manager,Trash,User Display,Workflow Status";
+String tabNames = "A,Assets,Breadcrumb,Button,Captcha,Column,Container,Custom Attribute,DDM,Diff,Discussion,Display Style,Drop Here Info,Email Notification Settings,Error,Error Header,Flags,Form Navigator,Frontend,Header,Icon Menu,Icons,Input,Language,Layout,Logo Selector,Membership Policy Error,Meta Tags,Navbar,Navbar Search,Navigation,Page Iterator,Panel,Preview,Quick Access Entry,Ratings,Row,RSS,Search,Search Paginator,Search Toggle,Sites Directory,Social,Staging,Success,Tabs,Toggle,Template Selector,Translation Manager,Trash,User Display,User Portrait,Workflow Status";
 %>
 
 <div class="container-fluid">
@@ -38,9 +38,15 @@ String tabNames = "Assets,Breadcrumb,Button,Captcha,Column,Container,Custom Attr
 			/>
 		</div>
 		<div class="col-xs-9">
-			<h1 class="test-ui-taglib-title"><%= ParamUtil.getString(request, "tabs1", "Taglib ") %></h1>
+			<h1 class="test-ui-taglib-title"><%= ParamUtil.getString(request, "tabs1", "Assets") %></h1>
 
 			<c:choose>
+				<c:when test='<%= tabs1.equals("A") %>'>
+					<%@ include file="/a.jsp" %>
+				</c:when>
+				<c:when test='<%= tabs1.equals("Alert") %>'>
+					<%@ include file="/alert.jsp" %>
+				</c:when>
 				<c:when test='<%= tabs1.equals("Assets") %>'>
 					<%@ include file="/assets.jsp" %>
 				</c:when>
@@ -62,6 +68,9 @@ String tabNames = "Assets,Breadcrumb,Button,Captcha,Column,Container,Custom Attr
 				<c:when test='<%= tabs1.equals("Custom Attribute") %>'>
 					<%@ include file="/custom_attribute.jsp" %>
 				</c:when>
+				<c:when test='<%= tabs1.equals("DDM") %>'>
+					<%@ include file="/ddm.jsp" %>
+				</c:when>
 				<c:when test='<%= tabs1.equals("Diff") %>'>
 					<%@ include file="/diff.jsp" %>
 				</c:when>
@@ -70,6 +79,9 @@ String tabNames = "Assets,Breadcrumb,Button,Captcha,Column,Container,Custom Attr
 				</c:when>
 				<c:when test='<%= tabs1.equals("Display Style") %>'>
 					<%@ include file="/display_style.jsp" %>
+				</c:when>
+				<c:when test='<%= tabs1.equals("Drop Here Info") %>'>
+					<%@ include file="/drop_here_info.jsp" %>
 				</c:when>
 				<c:when test='<%= tabs1.equals("Email Notification Settings") %>'>
 					<%@ include file="/email_notification_settings.jsp" %>
@@ -92,9 +104,6 @@ String tabNames = "Assets,Breadcrumb,Button,Captcha,Column,Container,Custom Attr
 				<c:when test='<%= tabs1.equals("Header") %>'>
 					<%@ include file="/header.jsp" %>
 				</c:when>
-				<c:when test='<%= tabs1.equals("HTML") %>'>
-					<%@ include file="/html.jsp" %>
-				</c:when>
 				<c:when test='<%= tabs1.equals("Icons") %>'>
 					<%@ include file="/icons.jsp" %>
 				</c:when>
@@ -106,6 +115,9 @@ String tabNames = "Assets,Breadcrumb,Button,Captcha,Column,Container,Custom Attr
 				</c:when>
 				<c:when test='<%= tabs1.equals("Language") %>'>
 					<%@ include file="/language.jsp" %>
+				</c:when>
+				<c:when test='<%= tabs1.equals("Layout") %>'>
+					<%@ include file="/layout.jsp" %>
 				</c:when>
 				<c:when test='<%= tabs1.equals("Logo Selector") %>'>
 					<%@ include file="/logo_selector.jsp" %>
@@ -134,8 +146,8 @@ String tabNames = "Assets,Breadcrumb,Button,Captcha,Column,Container,Custom Attr
 				<c:when test='<%= tabs1.equals("Preview") %>'>
 					<%@ include file="/preview.jsp" %>
 				</c:when>
-				<c:when test='<%= tabs1.equals("Quick Access") %>'>
-					<%@ include file="/quick_access.jsp" %>
+				<c:when test='<%= tabs1.equals("Quick Access Entry") %>'>
+					<%@ include file="/quick_access_entry.jsp" %>
 				</c:when>
 				<c:when test='<%= tabs1.equals("Ratings") %>'>
 					<%@ include file="/ratings.jsp" %>
@@ -155,9 +167,6 @@ String tabNames = "Assets,Breadcrumb,Button,Captcha,Column,Container,Custom Attr
 				<c:when test='<%= tabs1.equals("Search Toggle") %>'>
 					<%@ include file="/search_toggle.jsp" %>
 				</c:when>
-				<c:when test='<%= tabs1.equals("Section") %>'>
-					<%@ include file="/section.jsp" %>
-				</c:when>
 				<c:when test='<%= tabs1.equals("Sites Directory") %>'>
 					<%@ include file="/sites_directory.jsp" %>
 				</c:when>
@@ -169,6 +178,9 @@ String tabNames = "Assets,Breadcrumb,Button,Captcha,Column,Container,Custom Attr
 				</c:when>
 				<c:when test='<%= tabs1.equals("Success") %>'>
 					<%@ include file="/success.jsp" %>
+				</c:when>
+				<c:when test='<%= tabs1.equals("Tabs") %>'>
+					<%@ include file="/tabs.jsp" %>
 				</c:when>
 				<c:when test='<%= tabs1.equals("Template Selector") %>'>
 					<%@ include file="/template_selector.jsp" %>
@@ -184,6 +196,9 @@ String tabNames = "Assets,Breadcrumb,Button,Captcha,Column,Container,Custom Attr
 				</c:when>
 				<c:when test='<%= tabs1.equals("User Display") %>'>
 					<%@ include file="/user_display.jsp" %>
+				</c:when>
+				<c:when test='<%= tabs1.equals("User Portrait") %>'>
+					<%@ include file="/user_portrait.jsp" %>
 				</c:when>
 				<c:when test='<%= tabs1.equals("Workflow Status") %>'>
 					<%@ include file="/workflow_status.jsp" %>

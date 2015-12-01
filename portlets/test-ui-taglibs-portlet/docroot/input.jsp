@@ -39,7 +39,7 @@
 </div>
 
 <aui:form>
-	<h4>aui:select and aui:option</h4>
+	<h3>aui:select and aui:option</h3>
 
 	<aui:select name="SelectBox" value="select option" >
 		<aui:option value="Option 1"><liferay-ui:message key="Option 1" /></aui:option>
@@ -49,9 +49,7 @@
 		<aui:option value="Option 3"><liferay-ui:message key="Option 3" /></aui:option>
 	</aui:select>
 
-	<br />
-
-	<h4>aui:input</h4>
+	<h3>aui:input</h3>
 
 	<aui:fieldset>
 		<aui:field-wrapper>
@@ -71,35 +69,37 @@
 
 	<br />
 
-	<h4>ui:input-checkbox</h4>
+	<h3>ui:input-checkbox</h3>
 
 	<liferay-ui:input-checkbox param="Checkbox" formName="Checkbox Name" />
 
-	<br />
+	<br /><br />
 
-	<h4>ui:input-date</h4>
+	<h3>ui:input-date</h3>
 
 	<liferay-ui:input-date />
 
 	<br />
 
-	<h4>ui:input-field (model = SCLicense)</h4>
+	<h3>ui:input-field (model = SCLicense)</h3>
 
 	<liferay-ui:input-field field="active" defaultValue="<%= Boolean.TRUE %>" model="<%= SCLicense.class %>" />
 
-	<h4>ui:input-field (model = SCProductEntry)</h4>
+	<br />
+
+	<h3>ui:input-field (model = SCProductEntry)</h3>
 
 	<liferay-ui:input-field field="pageURL" model="<%= SCProductEntry.class %>" />
 
 	<br />
 
-	<h4>ui:input-localized</h4>
+	<h3>ui:input-localized</h3>
 
 	<liferay-ui:input-localized name="input localized" xml="" />
 
 	<br />
 
-	<h4>ui:input-move-boxes</h4>
+	<h3>ui:input-move-boxes</h3>
 
 	<%
 	List<KeyValuePair> list = new ArrayList<KeyValuePair>();
@@ -124,55 +124,55 @@
 
 	<br />
 
-	<h4>ui:input-permissions</h4>
+	<h3>ui:input-permissions</h3>
 
 	<liferay-ui:input-permissions />
 
 	<br /><br />
 
-	<h4>ui:input-repeat</h4>
+	<h3>ui:input-repeat</h3>
 
 	<liferay-ui:input-repeat />
 
 	<br />
 
-	<h4>ui:input-resource</h4>
+	<h3>ui:input-resource</h3>
 
 	<liferay-ui:input-resource url="http://www.liferay.com" />
 
 	<br />
 
-	<h4>ui:input-scheduler</h4>
+	<h3>ui:input-scheduler</h3>
 
 	<liferay-ui:input-scheduler />
 
 	<br />
 
-	<h4>ui:input-search</h4>
+	<h3>ui:input-search</h3>
 
 	<liferay-ui:input-search />
 
 	<br />
 
-	<h4>ui:input-select</h4>
+	<h3>ui:input-select</h3>
 
 	<liferay-ui:input-select param="" />
 
 	<br />
 
-	<h4>ui:input-textarea</h4>
+	<h3>ui:input-textarea</h3>
 
 	<liferay-ui:input-textarea param="" />
 
 	<br />
 
-	<h4>ui:input-time</h4>
+	<h3>ui:input-time</h3>
 
 	<liferay-ui:input-time name="Time" amPmParam="ampm" hourParam="hour" minuteParam="minute" />
 
 	<br />
 
-	<h4>ui:input-time-zone</h4>
+	<h3>ui:input-time-zone</h3>
 
 	<liferay-ui:input-time-zone name="time zone" />
 

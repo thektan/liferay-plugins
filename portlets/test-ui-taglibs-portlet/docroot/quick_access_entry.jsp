@@ -15,11 +15,14 @@
 --%>
 
 <%@ page import="com.liferay.portal.kernel.servlet.taglib.ui.QuickAccessEntry" %>
-
+<%@ page import="com.liferay.portal.kernel.util.StringBundler" %>
 <%
 QuickAccessEntry testQuickAccessEntry = new QuickAccessEntry();
+StringBundler testBody = new StringBundler("Some test string.");
+
+testQuickAccessEntry.setBody(testBody);
 testQuickAccessEntry.setData("Testing Data");
-testQuickAccessEntry.setId("1");
+testQuickAccessEntry.setId("12345");
 testQuickAccessEntry.setLabel("Testing Label");
 
 List<QuickAccessEntry> quickAccessEntries = Arrays.asList(testQuickAccessEntry);
@@ -28,7 +31,7 @@ List<QuickAccessEntry> quickAccessEntries = Arrays.asList(testQuickAccessEntry);
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
-	<span class="badge badge-primary">liferay-ui:quick-access</span>
+	<span class="badge badge-primary">liferay-ui:quick-access-entry</span>
 </div>
 
 <liferay-ui:quick-access-entry label="skip-to-search" />

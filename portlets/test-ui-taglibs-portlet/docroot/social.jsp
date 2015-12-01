@@ -39,16 +39,6 @@
 />
 
 <%-- <%
-String types = GetterUtil.getString((String)request.getAttribute("liferay-ui:social-bookmark:types"));
-String url = GetterUtil.getString((String)request.getAttribute("liferay-ui:social-bookmark:url"));
-String title = GetterUtil.getString((String)request.getAttribute("liferay-ui:social-bookmark:title"));
-String[] typesArray = null;
-
-if (Validator.isNotNull(types)) {
-	typesArray = StringUtil.split(types);
-}
-%>
-
 <liferay-ui:social-bookmark
 	title="<%= title %>"
 	type="<%= typesArray[i] %>"

@@ -41,11 +41,15 @@ String someString = "testing";
 	totalEntries="<%= 10 %>"
 />
 
+<br />
+
 <h3>liferay-ui:trash-undo</h3>
 
 <liferay-ui:trash-undo
 	portletURL="<%= someString %>"
 />
+
+<br />
 
 <h3>liferay-ui:restore-entry</h3>
 

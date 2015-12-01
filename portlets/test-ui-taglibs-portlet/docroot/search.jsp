@@ -28,16 +28,13 @@
 	<span class="badge badge-primary">liferay-ui:search-iterator</span>
 </div>
 
-<%
-// portletURL.setParameter("mvcPath", "/search.jsp");
-%>
-
 <liferay-ui:search-container
 	delta="1"
 	headerNames="email-address,screen-name"
 	iteratorURL="<%= portletURL %>"
 	total="<%= UserLocalServiceUtil.getUsersCount() %>"
 >
+
 	<liferay-ui:search-container-results
 		results="<%= UserLocalServiceUtil.getUsers(searchContainer.getStart(), searchContainer.getEnd()) %>"
 	/>
@@ -48,6 +45,7 @@
 		keyProperty="userId"
 		modelVar="curUser"
 	>
+
 		<liferay-ui:search-container-column-text
 			name="email-address"
 			property="emailAddress"

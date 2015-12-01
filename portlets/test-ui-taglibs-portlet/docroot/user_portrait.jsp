@@ -17,11 +17,7 @@
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
-	<span class="badge badge-primary">ddm:html</span>
-
-	<span class="badge badge-primary">ddm:html-field</span>
+	<span class="badge badge-primary">liferay-ui:user-portrait</span>
 </div>
 
-<liferay-ddm:html />
-
-<liferay-ddm:html-field />
+<liferay-ui:user-portrait />

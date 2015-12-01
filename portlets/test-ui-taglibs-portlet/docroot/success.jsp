@@ -20,8 +20,6 @@
 	SessionMessages.add(portletRequest, "success-test");
 %>
 
-<h1>Success</h1>
-
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 

@@ -22,50 +22,24 @@
 	<span class="badge badge-primary">aui:column</span>
 </div>
 
-
-	<aui:column columnWidth="<%= 25 %>" first="<%= true %>">
-		Column width set at 25 with "first" attribute set to true.
-		Column width set at 25 with "first" attribute set to true.
-		Column width set at 25 with "first" attribute set to true.
-		Column width set at 25 with "first" attribute set to true.
-		Column width set at 25 with "first" attribute set to true.
-	</aui:column>
-
-	<aui:column columnWidth="<%= 25 %>">
-		Column width set at 25.
-		Column width set at 25.
-		Column width set at 25.
-		Column width set at 25.
-		Column width set at 25.
-	</aui:column>
-
-	<aui:column columnWidth="<%= 25 %>">
-		Column width set at 25.
-		Column width set at 25.
-		Column width set at 25.
-		Column width set at 25.
-		Column width set at 25.
-	</aui:column>
-
-	<aui:column columnWidth="<%= 25 %>" last="<%= true %>">
-		Column width set at 25 with "last" attribute set to true.
-		Column width set at 25 with "last" attribute set to true.
-		Column width set at 25 with "last" attribute set to true.
-		Column width set at 25 with "last" attribute set to true.
-		Column width set at 25 with "last" attribute set to true.
-	</aui:column>
-
-
-<aui:column columnWidth="<%= 30 %>" first="<%= true %>">
-	Column width set at 30 with "first" attribute set to true.
+<aui:column columnWidth="<%= 20 %>" first="<%= true %>">
+	Column width set at 20 with "first" attribute set to true.
 	Column width set at 30 with "first" attribute set to true.
 	Column width set at 30 with "first" attribute set to true.
 	Column width set at 30 with "first" attribute set to true.
 	Column width set at 30 with "first" attribute set to true.
 </aui:column>
 
-<aui:column columnWidth="<%= 70 %>" last="<%= true %>">
-	Column width set at 70 with "last" attribute set to true.
+<aui:column columnWidth="<%= 30 %>">
+	Column width set at 30.
+	Column width set at 30.
+	Column width set at 30.
+	Column width set at 30.
+	Column width set at 30.
+</aui:column>
+
+<aui:column columnWidth="<%= 50 %>" last="<%= true %>">
+	Column width set at 50 with "last" attribute set to true.
 	Column width set at 70 with "last" attribute set to true.
 	Column width set at 70 with "last" attribute set to true.
 	Column width set at 70 with "last" attribute set to true.

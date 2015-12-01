@@ -14,18 +14,14 @@
  */
 --%>
 
-<%
-	PortletRequest portletRequest = (PortletRequest)request.getAttribute("javax.portlet.request");
-
-	SessionErrors.add(portletRequest, "error-test");
-
-	SessionMessages.add(portletRequest, PortalUtil.getPortletId(portletRequest) + SessionMessages.KEY_SUFFIX_HIDE_DEFAULT_ERROR_MESSAGE);
-%>
-
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 
-	<span class="badge badge-primary">liferay-ui:error</span>
+	<span class="badge badge-primary">ddm:html</span>
+
+	<span class="badge badge-primary">ddm:html-field</span>
 </div>
 
-<liferay-ui:error key="error-test" message="Error Message" />
+<%-- <liferay-ddm:html />
+
+<liferay-ddm:html-field /> --%>

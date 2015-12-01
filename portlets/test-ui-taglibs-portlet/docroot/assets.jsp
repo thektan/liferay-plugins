@@ -14,6 +14,24 @@
  */
 --%>
 
+<%
+	PortletRequest portletRequest = (PortletRequest)request.getAttribute("javax.portlet.request");
+
+	ServiceContext serviceContext = new ServiceContext();
+
+	AssetVocabulary assetVocabTest = AssetVocabularyLocalServiceUtil.createAssetVocabulary(12356362623L);
+
+	AssetCategoryException testCategoryException = new AssetCategoryException(
+		assetVocabTest, AssetCategoryException.TOO_MANY_CATEGORIES);
+
+	AssetTagException testTagException = new AssetTagException(AssetTagException.AT_LEAST_ONE_TAG);
+
+	SessionErrors.add(portletRequest, testCategoryException.getClass(), testCategoryException);
+	SessionErrors.add(portletRequest, testTagException.getClass(), testTagException);
+
+	SessionMessages.add(portletRequest, PortalUtil.getPortletId(portletRequest) + SessionMessages.KEY_SUFFIX_HIDE_DEFAULT_ERROR_MESSAGE);
+%>
+
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 

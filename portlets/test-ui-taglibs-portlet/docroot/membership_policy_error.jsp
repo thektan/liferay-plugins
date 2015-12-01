@@ -14,6 +14,17 @@
  */
 --%>
 
+<%
+	PortletRequest portletRequest = (PortletRequest)request.getAttribute("javax.portlet.request");
+
+	MembershipPolicyException testMembershipPolicyException = new MembershipPolicyException(
+		MembershipPolicyException.ORGANIZATION_MEMBERSHIP_NOT_ALLOWED);
+
+	SessionErrors.add(portletRequest, testMembershipPolicyException.getClass(), testMembershipPolicyException);
+
+	SessionMessages.add(portletRequest, PortalUtil.getPortletId(portletRequest) + SessionMessages.KEY_SUFFIX_HIDE_DEFAULT_ERROR_MESSAGE);
+%>
+
 <div class="alert alert-default">
 	<strong>Taglibs used: </strong>
 

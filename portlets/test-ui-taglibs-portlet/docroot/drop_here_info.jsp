@@ -14,28 +14,10 @@
  */
 --%>
 
-<liferay-ui:header
-	title="This is a longer header title that will be used to test mobile"
-/>
+<div class="alert alert-default">
+	<strong>Taglibs used: </strong>
 
-<aui:container id="testing">
-	<aui:row id="1" >
-		test
-	</aui:row>
-	<aui:row id="2">
-		test 2
-	</aui:row>
-</aui:container>
+	<span class="badge badge-primary">liferay-ui:drop-here-info</span>
+</div>
 
-<liferay-ui:breadcrumb />
-
-<liferay-ui:ratings
-	className="ratingsClassName"
-	classPK="1"
-/>
-
-<liferay-ui:progress
-	id="progressID"
-	message="This is the progress message"
-	sessionKey="session key"
-/>
+<liferay-ui:drop-here-info message="drop-files-here" />

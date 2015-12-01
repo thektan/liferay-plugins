@@ -14,20 +14,20 @@
  */
 --%>
 
-<%-- <%@ include file="/init.jsp" %>
+<div class="alert alert-default">
+	<strong>Taglibs used: </strong>
 
-<%
-String tabs1 = ParamUtil.getString(request, "tabs1", "button");
+	<span class="badge badge-primary">aui:layout</span>
+</div>
 
-String tabs1Names = "button,other";
-
-PortletURL tabs1URL = renderResponse.createRenderURL();
-
-tabs1URL.setParameter("struts_action", "/view");
-tabs1URL.setParameter("tabs1", tabs1);
-%>
-
-<liferay-ui:tabs
-	names="<%= tabs1Names %>"
-	url="<%= tabs1URL.toString() %>"
-/> --%>
+<aui:layout>
+	Some content inside aui:layout.
+	Some content inside aui:layout.
+	Some content inside aui:layout.
+	Some content inside aui:layout.
+	Some content inside aui:layout.
+	Some content inside aui:layout.
+	Some content inside aui:layout.
+	Some content inside aui:layout.
+	Some content inside aui:layout. 
+</aui:layout>

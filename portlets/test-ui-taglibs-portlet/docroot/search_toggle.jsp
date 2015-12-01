@@ -16,7 +16,7 @@
 
 <%
 	PortletRequest portletRequest = (PortletRequest)request.getAttribute("javax.portlet.request");
-	
+
 	DisplayTerms searchDisplayTerms = new DisplayTerms(portletRequest);
 %>
 
@@ -25,9 +25,9 @@
 
 	<span class="badge badge-primary">liferay-ui:search-container</span>
 
-	<span class="badge badge-primary">liferay-ui:search-container-results</span>
+	<span class="badge badge-primary">aui:fieldset</span>
 
-	<span class="badge badge-primary">liferay-ui:search-iterator</span>
+	<span class="badge badge-primary">aui:input</span>
 </div>
 
 <c:catch var="catchException">
@@ -37,9 +37,9 @@
 		id="toggle_id_asset_search"
 	>
 		<aui:fieldset>
-			<aui:input inlineField="<%= true %>" name="Name" size="30" value="Value" />
+			<aui:input inlineField="<%= true %>" name="Name1" size="30" value="Value1" />
 
-			<aui:input inlineField="<%= true %>" name="Name" size="30" value="Value" />
+			<aui:input inlineField="<%= true %>" name="Name2" size="30" value="Value2" />
 		</aui:fieldset>
 	</liferay-ui:search-toggle>
 </c:catch>
